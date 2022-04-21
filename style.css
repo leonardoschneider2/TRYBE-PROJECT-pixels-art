@@ -1,23 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&family=Updock&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-
 }
 body {
   background-image: url('pixelsArtBackground.jpg');
   background-repeat: no-repeat;
   background-position: right top;
   background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: 'Updock', cursive;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+header {
+  text-align: center;
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+}
+
+#cabecalho-botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin: 30px 0;
 }
 
 #corpo {
-  width: 1000px;
+  width: 600px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 50px;
+  border: 1px black solid;
+  border-radius: 10px;
+  margin-top: 50px;
+  background-color: rgba(150,150,150, 0.2);
+}
+
+#color-palette {
+  display: flex;
+  justify-content: center;
 }
 
 .color {
@@ -33,6 +66,13 @@ body {
 #color1 {background-color: rgb(255, 89, 89);}
 #color2 {background-color: rgb(50, 121, 50);}
 #color3 {background-color: rgb(96, 96, 255);}
+
+#pixel-board {
+  display: block;
+  width: 212px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
 
 .linha {
   display: block;
@@ -53,4 +93,10 @@ body {
 
 .selected {
   
+}
+
+button {
+  width: 210px;
+  padding: 10px 0;
+  font-size: 20px;
 }
