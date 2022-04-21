@@ -8,17 +8,14 @@ body {
   background-repeat: no-repeat;
   background-position: right top;
   background-attachment: fixed;
-  font-family: Arial;
   font-weight: 300;
 }
 
 h1 {
   font-size: 60px;
-  font-family: Arial;
 }
 
 h2 {
-  font-family: Arial;
   font-weight: 300;
 }
 
