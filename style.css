@@ -36,13 +36,21 @@ body {
 
 .linha {
   display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
 }
 
-.celula {
+.pixel {
   display: inline-block;
-  width: 150px;
-  height: 150px;
-  margin: 5px;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
   border: 1px black solid;
   background-color: white;
+}
+
+.selected {
+  
 }
