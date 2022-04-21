@@ -26,7 +26,7 @@ header {
   margin: 0 auto;
 }
 
-#cabecalho-botoes {
+.cabecalho-botoes {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -41,7 +41,7 @@ header {
   border: 1px black solid;
   border-radius: 10px;
   margin-top: 50px;
-  background-color: rgba(150, 150, 150, 0.2);
+  background-color: rgba(220, 220, 220, 0.904);
 }
 
 #color-palette {
@@ -62,18 +62,6 @@ header {
   background-color: black;
 }
 
-#color1 {
-  background-color: rgb(255, 89, 89);
-}
-
-#color2 {
-  background-color: rgb(50, 121, 50);
-}
-
-#color3 {
-  background-color: rgb(96, 96, 255);
-}
-
 #pixel-board {
   display: block;
   width: 212px;
@@ -82,7 +70,9 @@ header {
 }
 
 .linha {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: 0;
   padding: 0;
   line-height: 0;
@@ -98,8 +88,39 @@ header {
   background-color: white;
 }
 
-button {
+.press {
   width: 210px;
   padding: 10px 0;
   font-size: 20px;
+}
+
+.cabecalho-number-lines {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  flex-direction: row;
+}
+
+#board-size {
+  padding-right: 5px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  width: 80px;
+}
+
+#generate-board {
+  height: 44px;
+  width: 80px;
+}
+
+button {
+  background-color: rgb(210, 210, 210);
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: rgb(195, 195, 195);
+  transition: background 0.2s;
 }

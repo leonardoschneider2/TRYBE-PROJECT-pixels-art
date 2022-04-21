@@ -1,16 +1,28 @@
 const quadroDePintura = document.getElementById('pixel-board');
 
-for (let i = 0; i < 5; i += 1) {
-  const linhaDePintura = document.createElement('div');
-  linhaDePintura.className = 'linha';
-  quadroDePintura.appendChild(linhaDePintura);
+function firstFrame(num) {
+  if (num > 50) {
+    num = 50;
+  }
+  if (num < 5) {
+    num = 5;
+  }
+  for (let i = 0; i < num; i += 1) {
+    const linhaDePintura = document.createElement('div');
+    linhaDePintura.className = 'linha';
+    quadroDePintura.appendChild(linhaDePintura);
 
-  for (let j = 0; j < 5; j += 1) {
-    const pixelDePintura = document.createElement('div');
-    pixelDePintura.className = 'pixel';
-    linhaDePintura.appendChild(pixelDePintura);
+    for (let j = 0; j < num; j += 1) {
+      const pixelDePintura = document.createElement('div');
+      pixelDePintura.className = 'pixel';
+      linhaDePintura.appendChild(pixelDePintura);
+    }
   }
 }
+
+firstFrame(5);
+changeColor();
+
 
 function colorSelect(event) {
   const whoWasClicked = event.target;
@@ -52,12 +64,10 @@ function changeColor() {
   function aleColor() {
     return (Math.random() * 255);
   }
-  const titleColor = `rgb(${aleColor()}, ${aleColor()}, ${aleColor()})`;
   const back1 = `rgb(${aleColor()}, ${aleColor()}, ${aleColor()})`;
   const back2 = `rgb(${aleColor()}, ${aleColor()}, ${aleColor()})`;
   const back3 = `rgb(${aleColor()}, ${aleColor()}, ${aleColor()})`;
 
-  document.querySelector('#title').style.color = titleColor;
   document.querySelector('#color1').style.backgroundColor = back1;
   document.querySelector('#color2').style.backgroundColor = back2;
   document.querySelector('#color3').style.backgroundColor = back3;
@@ -66,10 +76,24 @@ function changeColor() {
 document.querySelector('#change-color').addEventListener('click', changeColor);
 
 function resetColor() {
-  document.querySelector('#title').style.color = 'black';
-  document.querySelector('#color1').style.backgroundColor = 'rgb(255, 89, 89)';
-  document.querySelector('#color2').style.backgroundColor = 'rgb(50, 121, 50)';
-  document.querySelector('#color3').style.backgroundColor = 'rgb(96, 96, 255)';
+  document.querySelector('#color1').style.backgroundColor = 'red';
+  document.querySelector('#color2').style.backgroundColor = 'green';
+  document.querySelector('#color3').style.backgroundColor = 'blue';
 }
 
 document.querySelector('#reset-color').addEventListener('click', resetColor);
+
+document.querySelector('#generate-board').addEventListener('click', createFrame);
+
+function createFrame() {
+  const number = document.querySelector('#board-size').value;
+  if(number !== '') {
+    // const newFrame = document.createElement('div');
+    /*newFrame.className = 'pixel-board';*/
+    //document.getElementById('corpo-sessao').appendChild(newFrame);
+    document.querySelector('#pixel-board').textContent = '';
+    firstFrame(number);
+  } else {
+    return alert('Board inválido!');
+  }
+}
