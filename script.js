@@ -8,12 +8,10 @@ function firstFrame(num) {
   if (number < 5) {
     number = 5;
   }
-
   for (let i = 0; i < number; i += 1) {
     const linhaDePintura = document.createElement('div');
     linhaDePintura.className = 'linha';
     quadroDePintura.appendChild(linhaDePintura);
-
     for (let j = 0; j < number; j += 1) {
       const pixelDePintura = document.createElement('div');
       pixelDePintura.className = 'pixel';
