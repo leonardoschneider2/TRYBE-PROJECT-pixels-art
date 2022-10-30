@@ -15,25 +15,31 @@
     </header>
     <section id="corpo-sessao">
       <div id="color-palette">
-        <div class="color selected" id="color0"></div>
-        <div class="color" id="color1"></div>
-        <div class="color" id="color2"></div>
-        <div class="color" id="color3"></div>
+        <div class="color selected" id="color0">RGB(0, 0, 0)</div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
       </div>
       <div class="cabecalho-botoes">
         <button class="press" id="clear-board">Limpar</button>
         <button class="press" id="change-color">Troque as cores</button>
-        <button class="press" id="reset-color">Cores Primárias</button>
+        <button class="press" id="erase">Borracha</button>
       </div>
       <div class="cabecalho-number-lines">
-        <input id="board-size" value="" type="number" min="1">
-        <button id="generate-board">VQV</button>
+        <label >Quantidade de Pixels<input id="board-size" class="inputo" value="" type="number" min="1">
+        <button class="but" id="generate-board">VQV</button></label>
       </div>
 
       <div id="pixel-board">
 
         <!-- ACRESCENTANDO DIVS POR JAVA SCRIPT -->
 
+      </div>
+
+      <div id="options">
+        <div id="line-options1">
+          <button id="remove-board" class="press">Remova As bordas</button>
+        </div>
       </div>
     </section>
   </main>
